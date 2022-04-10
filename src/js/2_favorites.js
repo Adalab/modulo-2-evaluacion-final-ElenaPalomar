@@ -1,9 +1,26 @@
 'use strict';
 
 function handleClickRenderedDrinks(event) {
-  console.log(event.target);
-  console.log(event.currentTarget);
-};
+
+  const idSelectedDrink = event.currentTarget.id;
+
+  const foundDrink = drinks.find(item => {
+    return item.idDrink === idSelectedDrink;
+  });
+
+  const foundFavoriteIndex = favorites.findIndex(item => {
+    return item.idDrink === idSelectedDrink;
+  });
+
+  if(foundFavoriteIndex === -1 ) {
+    favorites.push(foundDrink);
+  } else {
+    favorites.splice(foundFavoriteIndex, 1);
+  }
+
+  renderDrinksHtml();
+
+}
 
 
 
