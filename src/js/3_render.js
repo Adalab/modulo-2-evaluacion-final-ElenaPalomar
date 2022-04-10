@@ -1,6 +1,6 @@
 'use strict';
 
-function renderDrinksHtml() {
+function renderDrinksHtml(s) {
   let html = '';
 
   for (const drink of drinks) {
@@ -31,6 +31,5 @@ function renderDrinksHtml() {
   mainList.innerHTML = html;
 
   listenersRenderedDrinks();
-
 
 }

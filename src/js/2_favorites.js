@@ -19,6 +19,7 @@ function handleClickRenderedDrinks(event) {
   }
 
   renderDrinksHtml();
+  renderFavorites();
 
 }
 

@@ -13,3 +13,4 @@ const searchButton = document.querySelector('.js_searchButton');
 
 // Favorites
 let favorites = [];
+const favoriteList = document.querySelector('.js_favoriteList');
