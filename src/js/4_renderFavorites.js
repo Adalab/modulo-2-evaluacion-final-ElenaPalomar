@@ -1,12 +1,12 @@
 'use strict';
 
-function renderFavorites() {
+function renderFavoritesHtml(favorites) {
 
   let html = '';
 
   for (const favorite of favorites) {
 
-    html += `<li class="favorite js_favorites" id=${favorite.idDrink}>`;
+    html += `<li class="favorite js_favorite" id=${favorite.idDrink}>`;
 
     if (favorite.strDrinkThumb === '') {
       html += ` <img src='https://via.placeholder.com/210x295/ffffff/666666/?text=img' alt='${favorite.strDrink}' />`;
@@ -22,3 +22,5 @@ function renderFavorites() {
   favoriteList.innerHTML = html;
 
 }
+
+

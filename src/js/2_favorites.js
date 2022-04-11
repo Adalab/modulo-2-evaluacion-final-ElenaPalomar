@@ -2,6 +2,10 @@
 
 function handleClickRenderedDrinks(event) {
 
+  if(favoriteDrinkList !== null) {
+    favorites = favoriteDrinkList;
+  }
+
   const idSelectedDrink = event.currentTarget.id;
 
   const foundDrink = drinks.find(item => {
@@ -18,8 +22,10 @@ function handleClickRenderedDrinks(event) {
     favorites.splice(foundFavoriteIndex, 1);
   }
 
+  localStorage.setItem('favoriteDrinkList', JSON.stringify(favorites));
+
   renderDrinksHtml();
-  renderFavorites();
+  renderFavoritesHtml(favorites);
 
 }
 
