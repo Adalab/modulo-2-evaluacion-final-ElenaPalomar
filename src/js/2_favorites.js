@@ -45,18 +45,15 @@ function handleClickDeleteFavorites(event) {
 
   const idFavoriteButton = event.currentTarget.id;
 
-  console.log(event.currentTarget.id);
-
   const foundFavoriteIndex = favorites.findIndex(item => {
     return item.idDrink === idFavoriteButton;
   });
-  console.log(foundFavoriteIndex);
 
   if(foundFavoriteIndex !== -1 ) {
     favorites.splice(foundFavoriteIndex, 1);
   }
 
-  renderFavoritesHtml(favorites)
+  renderFavoritesHtml(favorites);
 
 }
 
@@ -67,4 +64,5 @@ function listenersDeleteFavoritesButton() {
   for (const item of deleteButtons) {
     item.addEventListener('click', handleClickDeleteFavorites);
   }
+
 }

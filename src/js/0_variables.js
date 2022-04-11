@@ -16,6 +16,14 @@ let favorites = [];
 const favoriteList = document.querySelector('.js_favoriteList');
 
 
+// Reset Search
+const resetSearch = document.querySelector('.js_reset');
+
+
+/* // Reset All Favorites
+const favoritesContainer = document.querySelector('.js_favorites'); */
+
+
 
 //LocalStorage
 const favoriteDrinkList = JSON.parse(localStorage.getItem('favoriteDrinkList'));
