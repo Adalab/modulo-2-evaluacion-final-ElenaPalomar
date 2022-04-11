@@ -19,25 +19,31 @@
   <body>
     <div class="page">
       <header class="header">
-        <h1 class="title capitalize">Buscador de Cócteles</h1>
+        <h1 class="header__title capitalize">Buscador de cócteles</h1>
       </header>
 
       <main class="main">
         <form class="form" action="">
-          <input class="js_searchText" type="text" name="search" />
-          <button class="search js_searchButton">Buscar</button>
-          <button class="reset js_reset">Nueva búsqueda</button>
+          <input
+            class="form__search js_searchText capitalize"
+            type="text"
+            name="search"
+          />
+          <div class="form__container">
+            <button class="button js_searchButton">Buscar</button>
+            <button class="button js_reset">Nueva búsqueda</button>
+          </div>
         </form>
 
         <div class="container">
           <section class="favorites js_favorites">
             <h2 class="favorites__title capitalize">Cócteles favoritos</h2>
-            <ul class="favorites__list js_favoriteList"></ul>
+            <ul class="favorites__list js_favoriteList capitalize"></ul>
           </section>
 
           <section class="mainList">
             <h2 class="mainList__title capitalize">Lista</h2>
-            <ul class="mainList__list js_mainList"></ul>
+            <ul class="mainList__list js_mainList capitalize"></ul>
           </section>
 
         </div>
