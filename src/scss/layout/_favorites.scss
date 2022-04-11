@@ -27,7 +27,7 @@
 
       &__image {
         width: 120px;
-        
+
         box-shadow: 0 0 10px $colorBlack;
       }
 
@@ -62,9 +62,25 @@
           font-size: 30px;
           color: $colorDarkBackground;
         }
+
       }
 
 
     }
+  }
+
+  .resetFavorites {
+    background-image: linear-gradient($colorSoftSilver, $colorMediumSilver, $colorDarkSilver);
+
+    box-shadow:
+      0 0 10px $colorMediumPink;
+
+    width: 140px;
+
+    margin: 20px;
+    padding: 5px;
+
+    color: $colorDarkBackground;
+    
   }
 }

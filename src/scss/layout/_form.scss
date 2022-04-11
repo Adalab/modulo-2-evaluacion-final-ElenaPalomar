@@ -7,7 +7,7 @@
   gap: 20px;
 
   &__search {
-    width: 300px;
+    width: 400px;
 
     padding: 10px;
 
@@ -22,14 +22,21 @@
 
   &__container {
 
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 
     .button{
       background-image: linear-gradient($colorSoftSilver, $colorMediumSilver, $colorDarkSilver);
       box-shadow:
       0 0 10px $colorMediumPink;
 
-      padding: 5px 10px;
+      width: 140px;
+
+      padding: 5px;
+
+      color: $colorDarkBackground;
     }
   }
 
