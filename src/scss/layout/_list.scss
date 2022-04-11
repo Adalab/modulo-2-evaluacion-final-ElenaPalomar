@@ -1,0 +1,53 @@
+.mainList {
+  background-color: $colorWhiteTransparent;
+  border: $colorWhite 3px solid;
+  border-radius: 5px;
+
+
+  margin: 30px;
+
+
+  &__title {
+    background-color: $colorWhite;
+  }
+
+
+  &__list {    
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+    .drink {
+      background-color: $colorWhite;
+      margin: 20px;
+      padding: 5px;
+
+      box-shadow: 0 0 20px $colorBlack;
+
+
+      &__image {
+        width: 150px;
+      }
+
+      &__title {
+        width: 150px;
+
+        text-align: center;
+      }
+
+      &--favorite {
+        box-shadow:
+          0 0 5px $colorSoftPink,
+          0 0 10px $colorSoftPink,
+          0 0 20px $colorSoftPink,
+          0 0 30px $colorMediumPink,
+          0 0 40px $colorMediumPink,
+          0 0 50px $colorDarkPink;
+
+          border: pink 5px solid;
+      }
+
+
+    }
+  }
+}

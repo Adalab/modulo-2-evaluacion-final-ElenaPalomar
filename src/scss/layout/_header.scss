@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: center;
+
+
+  &__title {
+    margin: 30px;
+
+    color: $colorWhite;	
+    text-shadow:
+      0 0 5px $colorSoftPink,
+      0 0 10px $colorSoftPink,
+      0 0 20px $colorSoftPink,
+      0 0 40px $colorMediumPink,
+      0 0 80px $colorMediumPink,
+      0 0 90px $colorMediumPink,
+      0 0 100px $colorDarkPink,
+      0 0 140px $colorDarkPink,
+      0 0 180px $colorDarkPink;
+
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,70 @@
+.favorites {
+  background-color: $colorSoftPinkSuperTransparent;
+  border: $colorSoftPinkTransparent 3px solid;
+  border-radius: 5px;
+
+
+  margin: 30px;
+
+
+  &__title {
+    background-color: $colorSoftPinkTransparent;
+  }
+
+
+  &__list {    
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+    .favorite {
+      margin: 20px;
+
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+
+      &__image {
+        width: 120px;
+        
+        box-shadow: 0 0 10px $colorBlack;
+      }
+
+      &__title {
+        width: 150px;
+
+        color: $colorSoftPink;
+        text-shadow: 
+          0 0 10px $colorBlack,
+          0 0 20px $colorBlack;
+        text-align: center;
+      }
+
+
+      .deleteFavorite {
+        background-color: $colorSoftPinkTransparent;
+        border: $colorMediumSilver 2px solid;
+        border-radius: 50%;
+
+
+        width: 50px;
+        height: 50px;
+
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        &__icon {
+          font-size: 30px;
+          color: $colorDarkBackground;
+        }
+      }
+
+
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  &__search {
+    width: 300px;
+
+    padding: 10px;
+
+    border: 7px solid;
+    border-color: $colorDarkSilver $colorMediumSilver $colorMediumSilver $colorDarkSilver  ;	
+
+    box-shadow:
+      0 0 10px $colorMediumSilver;
+
+      text-align: center;
+  }
+
+  &__container {
+
+    
+
+    .button{
+      background-image: linear-gradient($colorSoftSilver, $colorMediumSilver, $colorDarkSilver);
+      box-shadow:
+      0 0 10px $colorMediumPink;
+
+      padding: 5px 10px;
+    }
+  }
+
+}

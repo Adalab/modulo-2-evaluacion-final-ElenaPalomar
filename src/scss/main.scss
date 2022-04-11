@@ -2,14 +2,13 @@
 @import 'core/reset';
 @import 'core/global';
 @import 'layout/header';
-@import 'layout/main';
-/* @import 'pages/index'; */
+@import 'layout/mainIndex';
+@import 'layout/form';
+@import 'layout/favorites';
+@import 'layout/list';
+@import 'components/globals';
 
 
 .drink--favorite {
-  border: pink 5px solid;
-}
-
-.collapsed {
-  display: none;
+  
 }
