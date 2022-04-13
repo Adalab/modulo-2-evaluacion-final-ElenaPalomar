@@ -1,6 +1,6 @@
 'use strict';
 
-function renderDrinksHtml(s) {
+function renderDrinksHtml() {
   let html = '';
 
   for (const drink of drinks) {
@@ -25,6 +25,22 @@ function renderDrinksHtml(s) {
     }
 
     html += ` <h3 class="drink__title">${drink.strDrink}</h3>`;
+    html += ` <h4 ">Lista de tags</h4>`;
+    html += ` <p >${drink.strTags}</p>`;
+
+    if(drink.strTags !== null) {
+
+      if(drink.strTags.includes('Fruity')){
+        html += ` <h4 >Sabor afrutado</h4>`;
+      } else {
+        html += ` <h4 >No contiene frutas</h4>`;
+      }
+
+    } else {
+      html += ` <h4 >No hay detalles adicionales</h4>`;
+    }
+
+
     html += `</li>`;
   }
 

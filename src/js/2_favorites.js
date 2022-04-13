@@ -1,13 +1,15 @@
 'use strict';
 
-function addRemoveDrinkToFavorites() {
+function addRemoveDrinkToFavorites(event) {
   const idSelectedDrink = event.currentTarget.id;
 
   const foundDrink = drinks.find(item => {
     return item.idDrink === idSelectedDrink;
   });
 
-  const foundFavoriteIndex = favorites.findIndex(item => {
+  console.log(foundDrink.strDrink);
+
+  /* const foundFavoriteIndex = favorites.findIndex(item => {
     return item.idDrink === idSelectedDrink;
   });
 
@@ -15,12 +17,12 @@ function addRemoveDrinkToFavorites() {
     favorites.push(foundDrink);
   } else {
     favorites.splice(foundFavoriteIndex, 1);
-  }
+  } */
 }
 
 function handleClickRenderedDrinks(event) {
 
-  addRemoveDrinkToFavorites();
+  addRemoveDrinkToFavorites(event);
 
   localStorage.setItem('favoriteDrinkList', JSON.stringify(favorites));
 
