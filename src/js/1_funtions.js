@@ -8,6 +8,7 @@ function validateInputValue(searchTextValue) {
     const errorSearchText = document.createTextNode('No has introducido ningún cocktel para buscar');
     errorSearch.appendChild(errorSearchText);
     mainContainer.appendChild(errorSearch);
+    // Este mensaje se acumula con el del catch y con el de que no haya ningún valor en el campo de búsqueda, habría que borrar los anteriores antes de que salga este
 
   } else {
     getFromServer(searchTextValue);
@@ -23,31 +24,20 @@ function getFromServer(searchTextValue) {
     .then(data => {
 
       if(data.drink.length === 0) {
-        console.log('mensaje');
+
+        const errorSearch = document.createElement('h2');
+        errorSearch.classList.add('header__title');
+        const errorSearchText = document.createTextNode('El cocktel que estas buscando, no se encuentra entre nuestras sugerencias. Prueba con otro cocktel por favor.');
+        errorSearch.appendChild(errorSearchText);
+        mainContainer.appendChild(errorSearch);
+        // Este mensaje se acumula con el del catch y con el de que no haya ningún valor que coincida con ninguno de nuestros cockteles, habría que borrar los anteriores antes de que salga este
+
+      } else {
+
+        drinks = data.drinks;
+        renderDrinksHtml();
+
       }
-
-      drinks = data.drinks;
-
-      renderDrinksHtml();
-
-      // No funciona porque si introducimos un valor que no está en la lista de nombres de búsqueda de la API ya me da error en el propio 'drinks', pues no devuelve ningún dato
-
-      /* for (const drink of drinks) {
-        const drinkName = drink.strDrink.toLowerCase();
-
-        console.log(drinkName);
-        console.log(searchTextValue);
-
-        if(drinkName.includes(searchTextValue)) {
-
-          renderDrinksHtml();
-
-        } else {
-
-          console.log('No hay ninguna bebida que coincida con el nombre de búsqueda');
-
-        }
-      } */
 
     })
     .catch(() => {
@@ -56,6 +46,7 @@ function getFromServer(searchTextValue) {
       const errorSearchText = document.createTextNode('Ha ocurrido un error, prueba de nuevo');
       errorSearch.appendChild(errorSearchText);
       mainContainer.appendChild(errorSearch);
+      // Este mensaje se acumula con el de que no haya ningún valor en el campo de búsquedal y con el de que no haya ningún valor que coincida con ninguno de nuestros cockteles, habría que borrar los anteriores antes de que salga este
     });
 }
 
