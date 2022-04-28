@@ -5,12 +5,20 @@
 
   min-width: 200px;
 
+  @media all and (min-width: 768px) {
+    min-width: 440px;
+  }
+
 
   margin: 30px;
 
 
   &__title {
     background-color: $colorWhite;
+
+    font-family: $fontSubtitle;
+    font-size: 20px;
+    text-align: center;
   }
 
 
@@ -36,6 +44,7 @@
       &__title {
         width: 150px;
 
+        font-family: $fontText;
         text-align: center;
       }
 

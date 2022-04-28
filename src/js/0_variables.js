@@ -1,5 +1,7 @@
 'use strict';
 
+// VARIABLES
+
 // Save cocktail info
 const mainList = document.querySelector('.js_mainList');
 let drinks = [];
@@ -8,7 +10,6 @@ let drinks = [];
 // Search
 const searchText = document.querySelector('.js_searchText');
 const searchButton = document.querySelector('.js_searchButton');
-
 
 
 // Favorites
@@ -20,10 +21,9 @@ const favoriteList = document.querySelector('.js_favoriteList');
 const resetSearch = document.querySelector('.js_reset');
 
 
-/* // Reset All Favorites
-const favoritesContainer = document.querySelector('.js_favorites'); */
-
-
-
-//LocalStorage
+// LocalStorage
 const favoriteDrinkList = JSON.parse(localStorage.getItem('favoriteDrinkList'));
+
+
+// Main Container
+const mainContainer = document.querySelector('.main');
