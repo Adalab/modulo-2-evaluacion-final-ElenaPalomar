@@ -7,7 +7,11 @@
   gap: 20px;
 
   &__search {
-    width: 400px;
+    width: 300px;
+
+    @media all and (min-width: 768px) {
+      width: 400px;
+    }
 
     padding: 10px;
 

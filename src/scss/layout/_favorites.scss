@@ -11,11 +11,14 @@
   height: 100%;
   margin: 30px;
 
-
   &__title {
     background-color: $colorSoftPinkTransparent;
 
     width: 100%;
+
+    font-family: $fontSubtitle;
+    font-size: 20px;
+    text-align: center;
   }
 
 
@@ -29,18 +32,28 @@
 
       display: flex;
       align-items: center;
-      gap: 20px;
+      
+
+      @media all and (min-width: 768px) {
+        gap: 20px;
+      }
 
 
       &__image {
-        width: 120px;
+        width: 100px;
 
         box-shadow: 0 0 10px $colorBlack;
+
+        @media all and (min-width: 768px) {
+          width: 120px;
+        }
       }
 
       &__title {
         width: 150px;
 
+        font-family: $fontText;
+        font-size: 20px;
         color: $colorSoftPink;
         text-shadow: 
           0 0 10px $colorBlack,
@@ -55,8 +68,8 @@
         border-radius: 50%;
 
 
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
 
         cursor: pointer;
 
@@ -64,10 +77,19 @@
         justify-content: center;
         align-items: center;
 
+        @media all and (min-width: 768px) {
+          width: 50px;
+          height: 50px;
+        }
+
 
         &__icon {
-          font-size: 30px;
+          font-size: 20px;
           color: $colorDarkBackground;
+
+          @media all and (min-width: 768px) {
+            font-size: 30px;
+          }
         }
 
       }
@@ -88,6 +110,6 @@
     padding: 5px;
 
     color: $colorDarkBackground;
-    
+
   }
 }
