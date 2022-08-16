@@ -3,7 +3,7 @@
 // VARIABLES
 
 // Save cocktail info
-const mainList__list = document.querySelector('.js_mainList__list');
+const mainList_list = document.querySelector('.js_mainList_list');
 let drinks = [];
 
 

@@ -31,7 +31,7 @@ function renderDrinksHtml() {
     html += `</li>`;
   }
 
-  mainList__list.innerHTML = html;
+  mainList_list.innerHTML = html;
 
   listenersRenderedDrinks();
 

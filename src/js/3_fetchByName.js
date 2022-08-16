@@ -12,7 +12,7 @@ function getFromServer(searchTextValue) {
 
       if (prueba === null) {
 
-        const errorSearch = document.createElement('h2');
+        const errorSearch = document.createElement('p');
         errorSearch.classList.add('header__title');
         const errorSearchText = document.createTextNode('Lo siento. Mis respuestas son limitadas. Haz las consultas correctas.');
         errorSearch.appendChild(errorSearchText);
@@ -37,12 +37,16 @@ function getFromServer(searchTextValue) {
 
     })
     .catch((error) => {
-      const errorSearch = document.createElement('h2');
+
+      mainList.classList.add('hidden');
+
+      const errorSearch = document.createElement('p');
       errorSearch.classList.add('header__title');
       const errorSearchText = document.createTextNode('No lo intentes. Hazlo o no lo hagas. Pero en este caso inténtalo de nuevo por favor. Hemos tenido un problemilla momentáneo.');
       errorSearch.appendChild(errorSearchText);
       mainContainer.appendChild(errorSearch);
       // Este mensaje se acumula con el de que no haya ningún valor en el campo de búsquedal y con el de que no haya ningún valor que coincida con ninguno de nuestros cockteles, habría que borrar los anteriores antes de que salga este
       console.log(error);
+
     });
 }

@@ -8,13 +8,16 @@ function handleClickResetSearch(event) {
 
   event.preventDefault();
 
-  console.log('hola');
-
   searchText.value = '';
 
-  console.log(searchText.value);
+  /* if (mainList.className === 'hidden') {
+    mainList__list.innerHTML = '';
+    mainList.classList.add('hidden');
+  } else if (document.querySelector('.header__title')) {
+    document.querySelector('.header__title').removeChild();
+  } */
 
-  mainList__list.innerHTML = '';
+  mainList_list.innerHTML = '';
   mainList.classList.add('hidden');
 
 }
