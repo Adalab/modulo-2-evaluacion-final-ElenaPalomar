@@ -28,3 +28,7 @@ const favoriteDrinkList = JSON.parse(localStorage.getItem('favoriteDrinkList'));
 
 // Main Container
 const mainContainer = document.querySelector('.main');
+
+
+// Error texts
+const errorContainer = document.querySelector('.js_errorContainer');

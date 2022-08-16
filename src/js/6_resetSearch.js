@@ -10,16 +10,22 @@ function handleClickResetSearch(event) {
 
   searchText.value = '';
 
-  /* if (mainList.className === 'hidden') {
-    mainList__list.innerHTML = '';
+  if (!mainList.classList.contains('hidden')) {
+
+    mainList_list.innerHTML = '';
     mainList.classList.add('hidden');
-  } else if (document.querySelector('.header__title')) {
-    document.querySelector('.header__title').removeChild();
-  } */
 
-  mainList_list.innerHTML = '';
-  mainList.classList.add('hidden');
+  } else if (!errorContainer.classList.contains('hidden')) {
 
+    const errorText = document.querySelectorAll('.js_errorText');
+
+    for (const item of errorText) {
+      item.remove();
+    }
+
+    errorContainer.classList.add('hidden');
+
+  }
 }
 
 
