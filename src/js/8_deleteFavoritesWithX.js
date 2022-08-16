@@ -15,6 +15,8 @@ function handleClickDeleteFavorites(event) {
     favorites.splice(foundFavoriteIndex, 1);
   }
 
+  localStorage.setItem('favoriteDrinkList', JSON.stringify(favorites));
+
   renderFavoritesHtml(favorites);
   renderDrinksHtml();
 

@@ -6,11 +6,17 @@
 // Function to reset the search
 function handleClickResetSearch(event) {
 
-  event.preventDeafult();
+  event.preventDefault();
+
+  console.log('hola');
 
   searchText.value = '';
 
-  renderDrinksHtml();
+  console.log(searchText.value);
+
+  mainList__list.innerHTML = '';
+  mainList.classList.add('hidden');
+
 }
 
 

@@ -5,6 +5,7 @@
 
 // Function to fetch server information with the value of input:text when clicking the search button
 function handleClickSearchButton(event) {
+
   event.preventDefault();
 
   const searchTextValue = searchText.value.toLowerCase();

@@ -30,6 +30,7 @@ function getFromServer(searchTextValue) {
           };
         });
 
+        mainList.classList.remove('hidden');
         renderDrinksHtml();
 
       }

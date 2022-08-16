@@ -2,6 +2,7 @@
 'use strict';
 
 function renderDrinksHtml() {
+
   let html = '';
   console.log(drinks);
 
@@ -30,7 +31,7 @@ function renderDrinksHtml() {
     html += `</li>`;
   }
 
-  mainList.innerHTML = html;
+  mainList__list.innerHTML = html;
 
   listenersRenderedDrinks();
 
