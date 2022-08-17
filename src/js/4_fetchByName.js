@@ -13,7 +13,7 @@ function getFromServer(searchTextValue) {
 
         deletePreviousQueries();
 
-        errorMessage('Lo siento. Mis respuestas son limitadas. Haz las consultas correctas.');
+        errorMessage('Lo siento. Mis respuestas son limitadas. Haz las consultas correctas.', './assets/images/rightSearchs.jpg', 'Doctor Alfred Lanning', 'Yo, Robot - Interrogatorio al doctor Alfred Lanning por el detective Del Spooner, después de su muerte. - "Lo siento. Mis respuestas son limitadas. Haz las preguntas correctas."');
 
       } else {
 
@@ -40,7 +40,7 @@ function getFromServer(searchTextValue) {
 
       deletePreviousQueries();
 
-      errorMessage('No lo intentes. Hazlo o no lo hagas. Pero en este caso inténtalo de nuevo por favor. Hemos tenido un problemilla momentáneo.');
+      errorMessage('No lo intentes. Hazlo o no lo hagas. Pero en este caso inténtalo de nuevo por favor. Hemos tenido un problemilla momentáneo.', './assets/images/noTrys.jpg', 'Yoda', 'El imperio contrataca - Yoda enseñando a luke a usar la fuerza - "No lo intentes. Hazlo o no lo hagas. Pero no lo intentes."');
 
     });
 }
