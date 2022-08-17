@@ -7,21 +7,17 @@ function getFromServer(searchTextValue) {
     .then(response => response.json())
     .then(data => {
 
-      const prueba = data.drinks;
-      console.log(prueba);
+      const dataDrinks = data.drinks;
 
-      if (prueba === null) {
+      if (dataDrinks === null) {
 
-        const errorSearch = document.createElement('p');
-        errorSearch.classList.add('header__title');
-        const errorSearchText = document.createTextNode('Lo siento. Mis respuestas son limitadas. Haz las consultas correctas.');
-        errorSearch.appendChild(errorSearchText);
-        mainContainer.appendChild(errorSearch);
-        // Este mensaje se acumula con el del catch y con el de que no haya ningún valor que coincida con ninguno de nuestros cockteles, habría que borrar los anteriores antes de que salga este
+        deletePreviousQueries();
+
+        errorMessage('Lo siento. Mis respuestas son limitadas. Haz las consultas correctas.');
 
       } else {
 
-        drinks = data.drinks.map(item => {
+        drinks = dataDrinks.map(item => {
           return {
             idDrink: item.idDrink,
             strDrink: item.strDrink,
@@ -29,6 +25,8 @@ function getFromServer(searchTextValue) {
             strTags: item.strTags
           };
         });
+
+        eraseErrorMessage();
 
         mainList.classList.remove('hidden');
         renderDrinksHtml();
@@ -40,13 +38,9 @@ function getFromServer(searchTextValue) {
 
       mainList.classList.add('hidden');
 
-      const errorSearch = document.createElement('p');
-      errorSearch.classList.add('header__title');
-      const errorSearchText = document.createTextNode('No lo intentes. Hazlo o no lo hagas. Pero en este caso inténtalo de nuevo por favor. Hemos tenido un problemilla momentáneo.');
-      errorSearch.appendChild(errorSearchText);
-      mainContainer.appendChild(errorSearch);
-      // Este mensaje se acumula con el de que no haya ningún valor en el campo de búsquedal y con el de que no haya ningún valor que coincida con ninguno de nuestros cockteles, habría que borrar los anteriores antes de que salga este
-      console.log(error);
+      deletePreviousQueries();
+
+      errorMessage('No lo intentes. Hazlo o no lo hagas. Pero en este caso inténtalo de nuevo por favor. Hemos tenido un problemilla momentáneo.');
 
     });
 }

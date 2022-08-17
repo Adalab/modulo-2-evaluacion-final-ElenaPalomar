@@ -1,5 +1,24 @@
 'use strict';
 
+// FUNCTIONS
+
+// Function to delete previous queries
+
+const deletePreviousQueries = () => {
+
+  if (!mainList.classList.contains('hidden')) {
+
+    mainList_list.innerHTML = '';
+    mainList.classList.add('hidden');
+
+  } else {
+
+    eraseErrorMessage();
+
+  }
+
+};
+
 
 // HANDLE FUNCTIONS
 
@@ -10,22 +29,8 @@ function handleClickResetSearch(event) {
 
   searchText.value = '';
 
-  if (!mainList.classList.contains('hidden')) {
+  deletePreviousQueries();
 
-    mainList_list.innerHTML = '';
-    mainList.classList.add('hidden');
-
-  } else if (!errorContainer.classList.contains('hidden')) {
-
-    const errorText = document.querySelectorAll('.js_errorText');
-
-    for (const item of errorText) {
-      item.remove();
-    }
-
-    errorContainer.classList.add('hidden');
-
-  }
 }
 
 

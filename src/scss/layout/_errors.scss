@@ -1,0 +1,19 @@
+.error {
+  margin: 30px;
+
+  color: $colorWhite;	
+  text-shadow:
+    0 0 5px rgb(41, 205, 226),
+    0 0 10px rgb(41, 205, 226),
+    0 0 20px rgb(41, 205, 226),
+    0 0 40px rgb(39, 124, 204);
+
+  font-family: $fontError;
+  font-weight: 700;
+  text-align: center;
+  font-size: 20px;
+
+  &__text {
+  margin-bottom: 10px;
+  }
+}
