@@ -1,19 +1,27 @@
-/* Colors */
+/* COLORS */
+
+// Basics
 $colorWhite: #ffffff;
 $colorWhiteTransparent: rgba(255, 255, 255, 0.8);
+$colorBlack: #000;
 
+//Buttons
 $colorSoftSilver: #e3e4e5;
 $colorMediumSilver: #b9babb;
 $colorDarkSilver: #919292;
 
+// Error messages
+$colorSoftBlue: #29cde2;
+$colorMediumBlue: #277ccc;
+
+// Pinks
 $colorSoftPink: #ff02ff;
 $colorMediumPink: #a51da5;
 $colorDarkPink: #631a63;
 $colorSoftPinkTransparent: rgba(255, 2, 255, 0.8);
 $colorSoftPinkSuperTransparent: rgba(255, 2, 255, 0.3);
 
-$colorBlack: #000;
-
+// Body background
 $colorDarkBackground: #0a000a;
 $colorMediumBackground: #1d031d;
 $colorSoftBackground: #310831;
