@@ -4,7 +4,6 @@
 function renderDrinksHtml() {
 
   let html = '';
-  console.log(drinks);
 
   for (const drink of drinks) {
 
