@@ -8,7 +8,7 @@ function handleClickDeleteFavorites(event) {
   const idFavoriteButton = event.currentTarget.id;
 
   const foundFavoriteIndex = favorites.findIndex(item => {
-    return item.idDrink === idFavoriteButton;
+    return item.id === idFavoriteButton;
   });
 
   if (foundFavoriteIndex !== -1) {
@@ -17,8 +17,11 @@ function handleClickDeleteFavorites(event) {
 
   localStorage.setItem('favoriteDrinkList', JSON.stringify(favorites));
 
-  renderFavoritesHtml(favorites);
-  renderDrinksHtml();
+  removePreviusRenderedDrinks();
+  renderDrinks();
+
+  removePreviusRenderedFavorites();
+  renderFavorites(favorites);
 
 }
 

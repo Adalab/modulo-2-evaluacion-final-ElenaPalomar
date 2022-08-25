@@ -23,8 +23,8 @@ function deleteAllFavorites() {
     /* localStorage.setItem('favoriteDrinkList', JSON.stringify(favorites)); */
     localStorage.removeItem('favoriteDrinkList');
 
-    renderDrinksHtml();
-    renderFavoritesHtml(favorites);
+    renderDrinks();
+    renderFavorites(favorites);
   }
 
   deleteAllFavoritesButton.addEventListener('click', handleClickDeleteAllFavorites);
