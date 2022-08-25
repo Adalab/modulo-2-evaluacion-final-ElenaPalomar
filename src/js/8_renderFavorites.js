@@ -2,30 +2,64 @@
 
 
 // Function to render favorites list into Html
-function renderFavoritesHtml(favorites) {
-
-  let html = '';
+function renderFavorites(favorites) {
 
   for (const favorite of favorites) {
 
-    html += `<li class="favorite js_favorite" id=${favorite.idDrink}>`;
+    const listItem = document.createElement('li');
+    listItem.classList.add('favorite', 'js_favorite');
+    listItem.setAttribute('id', favorite.id);
 
-    if (favorite.strDrinkThumb === '') {
-      html += `  <img src='https://via.placeholder.com/210x295/ffffff/666666/?text=img' class="favorite__image" alt='${favorite.strDrink}' />`;
+
+    const listItemImage = document.createElement('img');
+    if (favorite.image === '') {
+
+      listItemImage.setAttribute('src', 'https://via.placeholder.com/210x295/ffffff/666666/?text=img');
+      listItemImage.setAttribute('alt', favorite.name);
+      listItemImage.classList.add('favorite__image');
+
     } else {
-      html += `  <img src='${favorite.strDrinkThumb}/preview' class="favorite__image" alt='${favorite.strDrink}' />`;
+
+      listItemImage.setAttribute('src', `${favorite.image}/preview`);
+      listItemImage.setAttribute('alt', favorite.name);
+      listItemImage.classList.add('favorite__image');
+
     }
+    listItem.appendChild(listItemImage);
 
-    html += `  <h3 class="favorite__title">${favorite.strDrink}</h3>`;
 
-    html += `  <button class="deleteFavorite js_deleteFavorite deleteFavorite__icon" id=${favorite.idDrink}><i class="fa-solid fa-circle-xmark"></i></button>`;
+    const listItemTitle = document.createElement('h3');
+    listItemTitle.classList.add('favorite__title');
+    const listItemTitleContent = document.createTextNode(favorite.name);
+    listItemTitle.appendChild(listItemTitleContent);
+    listItem.appendChild(listItemTitle);
 
-    html += `</li>`;
+
+    const listItemButton = document.createElement('button');
+    listItemButton.classList.add('deleteFavorite', 'js_deleteFavorite', 'deleteFavorite__icon');
+    listItemButton.setAttribute('id', favorite.id);
+
+    const listItemButtonIcon = document.createElement('i');
+    listItemButtonIcon.classList.add('fa-solid', 'fa-circle-xmark');
+    listItemButton.appendChild(listItemButtonIcon);
+
+    listItem.appendChild(listItemButton);
+
+
+    favoriteList.appendChild(listItem);
 
   }
-
-  favoriteList.innerHTML = html;
 
   listenersDeleteFavoritesButton();
 
 }
+
+
+const removePreviusRenderedFavorites = () => {
+
+  const liList = document.querySelectorAll('.js_favorite');
+  for (const item of liList) {
+    item.remove();
+  }
+
+};

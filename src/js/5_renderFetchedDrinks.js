@@ -1,38 +1,63 @@
 // Function to render drinks list into Html
 'use strict';
 
-function renderDrinksHtml() {
-
-  let html = '';
-  console.log(drinks);
+function renderDrinks() {
 
   for (const drink of drinks) {
 
-    let classFavorite = '';
     const foundFavoriteIndex = favorites.findIndex(item => {
-      return item.idDrink === drink.idDrink;
+      return item.id === drink.id;
     });
 
+
+    const listItem = document.createElement('li');
+    listItem.classList.add('drink', 'js_drinks');
+
     if (foundFavoriteIndex !== -1) {
-      classFavorite = 'drink--favorite';
-    } else {
-      classFavorite = '';
+      listItem.classList.add('drink--favorite');
     }
 
-    html += `<li class="drink js_drinks ${classFavorite}" id=${drink.idDrink}>`;
+    listItem.setAttribute('id', drink.id);
 
-    if (drink.strDrinkThumb === '') {
-      html += ` <img src='https://via.placeholder.com/210x295/ffffff/666666/?text=img' alt='${drink.strDrink}' />`;
+
+    const listItemImage = document.createElement('img');
+    if (drink.image === '') {
+
+      listItemImage.setAttribute('src', 'https://via.placeholder.com/210x295/ffffff/666666/?text=img');
+      listItemImage.setAttribute('alt', drink.name);
+      listItemImage.classList.add('drink__image');
+
     } else {
-      html += ` <img src='${drink.strDrinkThumb}/preview' class="drink__image" alt='${drink.strDrink}' />`;
-    }
 
-    html += ` <h3 class="drink__title">${drink.strDrink}</h3>`;
-    html += `</li>`;
+      listItemImage.setAttribute('src', `${drink.image}/preview`);
+      listItemImage.setAttribute('alt', drink.name);
+      listItemImage.classList.add('drink__image');
+
+    }
+    listItem.appendChild(listItemImage);
+
+
+    const listItemTitle = document.createElement('h3');
+    listItemTitle.classList.add('drink__title');
+    const listItemTitleContent = document.createTextNode(drink.name);
+    listItemTitle.appendChild(listItemTitleContent);
+    listItem.appendChild(listItemTitle);
+
+
+    mainList_list.appendChild(listItem);
+
   }
-
-  mainList_list.innerHTML = html;
 
   listenersRenderedDrinks();
 
 }
+
+
+const removePreviusRenderedDrinks = () => {
+
+  const liList = document.querySelectorAll('.js_drinks');
+  for (const item of liList) {
+    item.remove();
+  }
+
+};

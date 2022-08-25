@@ -9,11 +9,11 @@ function addRemoveDrinkToFavorites(event) {
   const idSelectedDrink = event.currentTarget.id;
 
   const foundDrink = drinks.find(item => {
-    return item.idDrink === idSelectedDrink;
+    return item.id === idSelectedDrink;
   });
 
   const foundFavoriteIndex = favorites.findIndex(item => {
-    return item.idDrink === idSelectedDrink;
+    return item.id === idSelectedDrink;
   });
 
   if (foundFavoriteIndex === -1) {
@@ -34,8 +34,11 @@ function handleClickRenderedDrinks(event) {
 
   localStorage.setItem('favoriteDrinkList', JSON.stringify(favorites));
 
-  renderDrinksHtml();
-  renderFavoritesHtml(favorites);
+  removePreviusRenderedDrinks();
+  renderDrinks();
+
+  removePreviusRenderedFavorites();
+  renderFavorites(favorites);
 
 }
 
