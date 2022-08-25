@@ -19,17 +19,16 @@ function getFromServer(searchTextValue) {
 
         drinks = dataDrinks.map(item => {
           return {
-            idDrink: item.idDrink,
-            strDrink: item.strDrink,
-            strDrinkThumb: item.strDrinkThumb,
-            strTags: item.strTags
+            id: item.idDrink,
+            name: item.strDrink,
+            image: item.strDrinkThumb
           };
         });
 
         eraseErrorMessage();
 
         mainList.classList.remove('hidden');
-        renderDrinksHtml();
+        renderDrinks();
 
       }
 
