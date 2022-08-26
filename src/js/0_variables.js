@@ -16,6 +16,7 @@ const mainList = document.querySelector('.js_mainList');
 // Favorites
 let favorites = [];
 const favoriteList = document.querySelector('.js_favoriteList');
+const deleteAllFavoritesButton = document.querySelector('.js_resetFavorites');
 
 
 // Reset Search

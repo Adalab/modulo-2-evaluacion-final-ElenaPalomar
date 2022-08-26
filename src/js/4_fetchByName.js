@@ -17,6 +17,7 @@ function getFromServer(searchTextValue) {
 
       } else {
 
+        // let drinks = [] was declared in VARIABLES
         drinks = dataDrinks.map(item => {
           return {
             id: item.idDrink,

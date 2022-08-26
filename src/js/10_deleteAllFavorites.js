@@ -1,34 +1,20 @@
 'use strict';
 
-// Function to delete all favorites (this one have a handle function and a listener to)
-function deleteAllFavorites() {
+// Function to delete all favorites clicking 'Borrar todos los favoritos' button
 
-  const favoritesContainer = favoriteList.parentElement;
+function handleClickDeleteAllFavorites(event) {
 
-  const deleteAllFavoritesButton = document.createElement('button');
-  const deleteAllFavoritesButtonText = document.createTextNode('Borar todos los favoritos');
+  event.preventDefault();
 
-  deleteAllFavoritesButton.appendChild(deleteAllFavoritesButtonText);
-  deleteAllFavoritesButton.classList.add('resetFavorites');
+  favorites = [];
 
-  favoritesContainer.appendChild(deleteAllFavoritesButton);
+  localStorage.removeItem('favoriteDrinkList');
 
+  removePreviusRenderedDrinks();
+  renderDrinks();
 
-  function handleClickDeleteAllFavorites(event) {
-
-    event.preventDefault();
-
-    favorites = [];
-
-    /* localStorage.setItem('favoriteDrinkList', JSON.stringify(favorites)); */
-    localStorage.removeItem('favoriteDrinkList');
-
-    renderDrinks();
-    renderFavorites(favorites);
-  }
-
-  deleteAllFavoritesButton.addEventListener('click', handleClickDeleteAllFavorites);
-
+  removePreviusRenderedFavorites();
+  renderFavorites(favorites);
 }
 
-deleteAllFavorites();
+deleteAllFavoritesButton.addEventListener('click', handleClickDeleteAllFavorites);
