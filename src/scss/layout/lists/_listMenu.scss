@@ -1,0 +1,59 @@
+.menu {
+  width: 150px;
+
+  margin: 35px auto 20px;
+
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  &__item {
+    background-color: white;
+    border-radius: 50%;
+
+    width: 60px;
+    height: 60px;
+
+    font-size: 45px;
+    line-height: 1.7;
+    text-align: center;
+
+    cursor: pointer;
+
+
+    &--hideFavorites {
+      background-color: $colorDarkPinkSuperTransparent;
+      border: $colorSoftPinkTransparent 2px outset;
+
+      color: $colorSoftPinkTransparent;
+    }
+
+    &--showFavorites {
+      background-color: $colorDarkPinkSuperTransparent;
+      border: $colorSoftPinkTransparent 2px outset;
+
+      color: $colorSoftPinkTransparent;
+
+      .itemContent__icon--favorites {
+        color: $colorSoftPinkTransparent;
+      }
+    }
+
+
+    &--searches {
+      background-color: $colorWhiteTransparent;
+      border: $colorWhite 2px outset;
+
+      color: $colorWhite;
+    }
+
+
+    .itemContentText {
+     font-size: 25px;
+    }
+  }
+}

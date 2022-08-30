@@ -1,22 +1,21 @@
 .form {
   width: 100%;
+
+  padding: 0 25px;
+
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+
 
   &__search {
-    width: 300px;
-
-    @media all and (min-width: 768px) {
-      width: 400px;
-    }
+    width: 100%;
+    max-width: 400px;
 
     padding: 10px;
 
     border: 7px solid;
-    border-color: $colorDarkSilver $colorMediumSilver $colorMediumSilver $colorDarkSilver  ;	
+    border-color: $colorDarkSilver $colorMediumSilver $colorMediumSilver $colorDarkSilver;	
 
     box-shadow:
       0 0 10px $colorMediumSilver;
@@ -24,24 +23,21 @@
       text-align: center;
   }
 
-  &__container {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  &__button{
+    background-image: linear-gradient(to left, $colorSoftSilver, $colorMediumSilver, $colorDarkSilver);
+    border: 5px outset;
 
-    .button{
-      background-image: linear-gradient($colorSoftSilver, $colorMediumSilver, $colorDarkSilver);
-      box-shadow:
-      0 0 10px $colorMediumPink;
+    padding:7px;
 
-      width: 140px;
+    color: $colorDarkBackground;
+    font-size: 20px;
 
-      padding: 5px;
+    cursor: pointer;
 
-      color: $colorDarkBackground;
+
+    &:active {
+      border: inset;
     }
   }
-
 }

@@ -26,7 +26,7 @@ const errorMessage = (errorTextContent, errorImageURL, errorImageAlt, errorImage
 };
 
 
-const eraseErrorMessage = () => {
+const deleteErrorMessage = () => {
 
   if (!errorContainer.classList.contains('hidden')) {
 

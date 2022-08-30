@@ -1,0 +1,85 @@
+.mainList {
+  background-color: $colorWhiteTransparent;
+  border-top: $colorSoftGreyTransparent 2px solid;
+  border-left: $colorSoftGreyTransparent 2px solid;
+  border-bottom: $colorDarkGreyTransparent 2px solid;
+  border-right: $colorDarkGreyTransparent 2px solid;
+  border-radius: 15px;
+
+  max-width: 100%;
+  min-width: 240px;
+
+  margin: 30px 30px 0;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+
+  @media all and (min-width: 590px) {
+    margin: 0 30px 0 15px;
+  }
+
+
+  &__title {
+    width: 100%;
+
+    margin-top: 15px;
+    padding: 5px;
+
+    color: $colorWhite;	
+    text-shadow:
+      0 0 5px $colorSoftBackground,
+      0 0 10px $colorSoftBackground,
+      0 0 20px $colorSoftBackground,
+      0 0 40px $colorMediumBackground,
+      0 0 80px $colorMediumBackground,
+      0 0 90px $colorDarkBackground;
+    font-family: $fontTitle;
+    font-size: 24px;
+    text-align: center;
+  }
+
+
+  &__list {    
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+    .drink {
+      background-color: $colorWhite;
+      margin: 20px;
+      padding: 5px;
+
+      box-shadow: 0 0 20px $colorBlack;
+
+      cursor: pointer;
+
+
+      &__image {
+        width: 150px;
+      }
+
+      &__title {
+        width: 150px;
+
+        font-family: $fontTextTitle;
+        text-align: center;
+      }
+
+      &--favorite {
+        box-shadow:
+          0 0 5px $colorSoftPink,
+          0 0 10px $colorSoftPink,
+          0 0 20px $colorSoftPink,
+          0 0 30px $colorMediumPink,
+          0 0 40px $colorMediumPink,
+          0 0 50px $colorDarkPink;
+
+          border: pink 5px solid;
+      }
+    }
+  }
+}

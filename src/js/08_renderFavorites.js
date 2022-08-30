@@ -36,11 +36,12 @@ function renderFavorites(favorites) {
 
 
     const listItemButton = document.createElement('button');
-    listItemButton.classList.add('deleteFavorite', 'js_deleteFavorite', 'deleteFavorite__icon');
+    listItemButton.classList.add('deleteFavorite', 'js_deleteFavorite');
     listItemButton.setAttribute('id', favorite.id);
 
-    const listItemButtonIcon = document.createElement('i');
-    listItemButtonIcon.classList.add('fa-solid', 'fa-circle-xmark');
+    const listItemButtonIcon = document.createElement('ion-icon');
+    listItemButtonIcon.classList.add('deleteFavorite__icon');
+    listItemButtonIcon.setAttribute('name', 'heart-dislike-outline');
     listItemButton.appendChild(listItemButtonIcon);
 
     listItem.appendChild(listItemButton);

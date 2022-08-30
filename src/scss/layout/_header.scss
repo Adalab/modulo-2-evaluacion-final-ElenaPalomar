@@ -4,7 +4,7 @@
 
 
   &__title {
-    margin: 30px;
+    margin: 25px 20px;
 
     color: $colorWhite;	
     text-shadow:
@@ -18,10 +18,9 @@
       0 0 140px $colorDarkPink,
       0 0 180px $colorDarkPink;
 
-    font-family: $fontTitle;
-    font-size: 26px;
-    font-weight: 700;
-    text-align: center;
+      font-family: $fontTitle;
+      font-size: 27px;
+      text-align: center;
 
     @media all and (min-width: 480px) {
       font-size: 40px;

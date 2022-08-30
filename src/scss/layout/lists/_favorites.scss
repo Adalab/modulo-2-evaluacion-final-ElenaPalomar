@@ -1,0 +1,143 @@
+.favorites {
+  background-color: $colorDarkPinkSuperTransparent;
+  border-top: $colorSoftPinkSuperTransparent 2px solid;
+  border-left: $colorSoftPinkSuperTransparent 2px solid;
+  border-bottom: $colorDarkPinkTransparent 2px solid;
+  border-right: $colorDarkPinkTransparent 2px solid;
+  border-radius: 15px;
+
+  min-width: 240px;
+  width: calc(100% - 60px);
+
+  margin: 0 30px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  &__title {
+    width: 100%;
+
+    color: $colorWhite;	
+    text-shadow:
+      0 0 5px $colorSoftPink,
+      0 0 10px $colorSoftPink,
+      0 0 20px $colorSoftPink,
+      0 0 40px $colorMediumPink,
+      0 0 80px $colorMediumPink,
+      0 0 90px $colorMediumPink,
+      0 0 100px $colorDarkPink,
+      0 0 140px $colorDarkPink,
+      0 0 180px $colorDarkPink;
+    font-family: $fontTitle;
+    font-size: 24px;
+    text-align: center;
+  }
+
+
+  &__list {    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+    .favorite {
+      border: #1d031d 1px solid;
+
+      width: 150px;
+      height:150px;
+
+      margin: 20px;
+      padding: 20px 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+
+
+      &__image {
+        border: #1d031d 1px solid;
+        width: 150px;
+        height: 150px;
+
+        position: absolute;
+      }
+
+      &__title {
+        width: 120px;
+
+        margin: 5px 0;
+
+        color: $colorMediumBackground;
+        text-shadow:
+        0 0 5px white,
+        0 0 10px white,
+        0 0 20px white,
+        0 0 40px white;
+        font-family: $fontTextTitle;
+        font-size: 20px;
+        text-align: center;
+
+        z-index: 2;
+      }
+
+
+      .deleteFavorite {
+        background-color: $colorDarkPink;
+        box-shadow: 
+          0 0 5px white,
+          0 0 10px white,
+          0 0 20px white;
+        border: #1d031d 2px solid;
+        border-radius: 50%;
+
+        width: 40px;
+        height: 40px;
+
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 2;
+
+        /* @media all and (min-width: 768px) {
+          width: 50px;
+          height: 50px;
+        } */
+
+
+        &__icon {
+          font-size: 20px;
+          color:#ff02ff;
+
+          /* @media all and (min-width: 768px) {
+            font-size: 30px;
+          } */
+        }
+      }
+    }
+  }
+
+
+  .resetFavorites {
+    background-image: linear-gradient($colorSoftSilver, $colorMediumSilver, $colorDarkSilver);
+
+    box-shadow:
+      0 0 10px $colorMediumPink;
+
+    width: 140px;
+
+    margin: 20px;
+    padding: 5px;
+
+    color: $colorDarkBackground;
+
+    cursor: pointer;
+  }
+}

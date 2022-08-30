@@ -15,12 +15,7 @@
       rel="stylesheet"
     />
 
-    <!-- ICONS -->
-    <script
-      src="https://kit.fontawesome.com/016f8587a2.js"
-      crossorigin="anonymous"
-    ></script>
-
+    <!-- STYLES -->
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
 
@@ -37,29 +32,64 @@
             type="text"
             name="search"
           />
-          <div class="form__container">
-            <button class="button js_searchButton">Buscar</button>
-            <button class="button js_reset">Nueva búsqueda</button>
-          </div>
+          <button class="form__button js_searchButton">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
         </form>
 
         <section class="error js_errorContainer hidden"></section>
-        <div class="container">
+        <section class="listsContainer js_listsContainer">
+          <!-- <nav class="menu">
+   <ul class="menu__list">
+     <li class="menu__item menu__item--hideFavorites js_showFavorites">
+       <span class="itemContentFavorites">
+         <ion-icon
+           name="heart-outline"
+           class="itemContentFavorites__icon js_favoritesIcon"
+         ></ion-icon>
+       </span>
+       <span class="itemContentText hidden">Show favorites</span>
+     </li>
+     <li class="menu__item menu__item--searches js_showSearches">
+       <span class="itemContent">
+         <ion-icon
+           name="wine-outline"
+           class="itemContent__icon itemContent__icon--searches"
+         ></ion-icon>
+       </span>
+     </li>
+   </ul>
+ </nav>
+ -->
           <section class="favorites js_favorites">
             <h2 class="favorites__title capitalize">Cócteles favoritos</h2>
             <ul class="favorites__list js_favoriteList capitalize"></ul>
+            <button class="resetFavorites js_resetFavorites">
+              Borrar todos los favoritos
+            </button>
           </section>
 
           <section class="mainList js_mainList hidden">
-            <h2 class="mainList__title capitalize">Lista de búsqueda</h2>
+            <h2 class="mainList__title js_mainListTitle capitalize"></h2>
             <ul class="mainList__list js_mainList_list capitalize"></ul>
           </section>
 
-        </div>
+        </section>
+
       </main>
 
     </div>
 
+    <!-- ICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- JAVASCRIPT -->
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

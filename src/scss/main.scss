@@ -2,10 +2,10 @@
 @import 'core/reset';
 @import 'core/global';
 @import 'layout/header';
-@import 'layout/errors';
-@import 'layout/mainIndex';
 @import 'layout/form';
-@import 'layout/favorites';
-@import 'layout/list';
+@import 'layout/errors';
+@import 'layout/lists/listsContainer';
+@import 'layout/lists/listMenu';
+@import 'layout/lists/favorites';
+@import 'layout/lists/list';
 @import 'components/globals';
-

@@ -26,13 +26,11 @@ function getFromServer(searchTextValue) {
           };
         });
 
-        eraseErrorMessage();
-
+        deletePreviousQueries();
         mainList.classList.remove('hidden');
         renderDrinks();
 
       }
-
     })
     .catch((error) => {
 

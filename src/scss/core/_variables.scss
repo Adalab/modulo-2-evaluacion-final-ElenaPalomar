@@ -2,7 +2,6 @@
 
 // Basics
 $colorWhite: #ffffff;
-$colorWhiteTransparent: rgba(255, 255, 255, 0.8);
 $colorBlack: #000;
 
 //Buttons
@@ -14,12 +13,19 @@ $colorDarkSilver: #919292;
 $colorSoftBlue: #29cde2;
 $colorMediumBlue: #277ccc;
 
-// Pinks
+// Main List
+$colorWhiteTransparent: rgba(255, 255, 255, 0.404);
+$colorSoftGreyTransparent: rgba(202, 202, 202, 0.815);
+$colorDarkGreyTransparent: rgb(59, 59, 59);
+
+// Favorites & Header
 $colorSoftPink: #ff02ff;
 $colorMediumPink: #a51da5;
 $colorDarkPink: #631a63;
 $colorSoftPinkTransparent: rgba(255, 2, 255, 0.8);
-$colorSoftPinkSuperTransparent: rgba(255, 2, 255, 0.3);
+$colorSoftPinkSuperTransparent: #fd84fd93;
+$colorDarkPinkSuperTransparent: rgba(255, 2, 255, 0.171);
+$colorDarkPinkTransparent: #4b134bce;
 
 // Body background
 $colorDarkBackground: #0a000a;
