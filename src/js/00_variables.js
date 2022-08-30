@@ -12,6 +12,8 @@ const searchText = document.querySelector('.js_searchText');
 const searchButton = document.querySelector('.js_searchButton');
 const mainList = document.querySelector('.js_mainList');
 
+const mainListTitle = document.querySelector('.js_mainListTitle');
+
 
 // Favorites
 let favorites = [];

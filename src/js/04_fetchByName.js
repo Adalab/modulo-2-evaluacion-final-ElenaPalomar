@@ -30,6 +30,9 @@ function getFromServer(searchTextValue) {
         mainList.classList.remove('hidden');
         renderDrinks();
 
+        // Display the cocktail list title dynamically with the name of the searched cocktail
+        mainListTitle.innerHTML = searchTextValue;
+
       }
     })
     .catch((error) => {
