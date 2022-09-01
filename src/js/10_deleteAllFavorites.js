@@ -11,7 +11,7 @@ function handleClickDeleteAllFavorites(event) {
   localStorage.removeItem('favoriteDrinkList');
 
   removePreviusRenderedDrinks();
-  renderDrinks();
+  renderDrinks(drinks);
 
   removePreviusRenderedFavorites();
   renderFavorites(favorites);

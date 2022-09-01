@@ -27,8 +27,7 @@ function getFromServer(searchTextValue) {
         });
 
         deletePreviousQueries();
-        mainList.classList.remove('hidden');
-        renderDrinks();
+        renderDrinks(drinks);
 
         // Display the cocktail list title dynamically with the name of the searched cocktail
         mainListTitle.innerHTML = searchTextValue;

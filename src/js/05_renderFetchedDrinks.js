@@ -1,9 +1,9 @@
 // Function to render drinks list into Html
 'use strict';
 
-function renderDrinks() {
+function renderDrinks(list) {
 
-  for (const drink of drinks) {
+  for (const drink of list) {
 
     const foundFavoriteIndex = favorites.findIndex(item => {
       return item.id === drink.id;

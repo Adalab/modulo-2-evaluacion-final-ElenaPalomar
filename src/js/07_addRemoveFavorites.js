@@ -35,7 +35,7 @@ function handleClickRenderedDrinks(event) {
   localStorage.setItem('favoriteDrinkList', JSON.stringify(favorites));
 
   removePreviusRenderedDrinks();
-  renderDrinks();
+  renderDrinks(drinks);
 
   removePreviusRenderedFavorites();
   renderFavorites(favorites);

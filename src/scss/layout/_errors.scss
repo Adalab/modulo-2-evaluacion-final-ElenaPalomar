@@ -1,6 +1,11 @@
 .error {
   margin: 30px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 
   &__text {
   margin-bottom: 10px;

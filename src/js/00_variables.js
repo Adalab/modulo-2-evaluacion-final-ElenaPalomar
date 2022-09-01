@@ -5,6 +5,7 @@
 // Save cocktail info
 const mainList_list = document.querySelector('.js_mainList_list');
 let drinks = [];
+let initialDrinks = [];
 
 
 // Search
