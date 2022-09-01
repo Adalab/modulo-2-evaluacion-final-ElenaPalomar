@@ -18,9 +18,7 @@ function initialGetFromServer() {
       });
 
       // Función to generate a random number to sort the cocktails randomly
-      const random = () => {
-        return Math.random() - 0.5;
-      };
+      const random = () => Math.random() - 0.5;
 
       const randomInitialDrinks = initialDrinks.sort(random);
 
