@@ -6,9 +6,9 @@
 
 const deletePreviousQueries = () => {
 
-  if (renderDrinks.length !== 0) {
+  if (!listsContainer.classList.contains('hidden')) {
 
-    mainList_list.innerHTML = '';
+    searchList.innerHTML = '';
 
   } else {
 

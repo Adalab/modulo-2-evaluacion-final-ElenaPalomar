@@ -7,6 +7,7 @@
 const errorMessage = (errorTextContent, errorImageURL, errorImageAlt, errorImageTitle) => {
 
   errorContainer.classList.remove('hidden');
+  listsContainer.classList.add('hidden');
 
   const errorTag = document.createElement('p');
   errorTag.classList.add('error__text', 'js_errorText');

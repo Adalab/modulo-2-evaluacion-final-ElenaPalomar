@@ -44,7 +44,7 @@ function renderDrinks(list) {
     listItem.appendChild(listItemTitle);
 
 
-    mainList_list.appendChild(listItem);
+    searchList.appendChild(listItem);
 
   }
 

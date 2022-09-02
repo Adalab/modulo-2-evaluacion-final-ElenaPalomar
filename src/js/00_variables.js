@@ -2,37 +2,34 @@
 
 // VARIABLES
 
-// Save cocktail info
-const mainList_list = document.querySelector('.js_mainList_list');
-let drinks = [];
+// Save cocktails info
 let initialDrinks = [];
+let drinks = [];
 
-
-// Search
 const searchText = document.querySelector('.js_searchText');
 const searchButton = document.querySelector('.js_searchButton');
-const mainList = document.querySelector('.js_mainList');
-
-const mainListTitle = document.querySelector('.js_mainListTitle');
 
 
-// Favorites
-let favorites = [];
-const favoriteList = document.querySelector('.js_favoriteList');
-const deleteAllFavoritesButton = document.querySelector('.js_resetFavorites');
-
-
-// Reset Search
-const resetSearch = document.querySelector('.js_reset');
-
-
-// LocalStorage
-const favoriteDrinkList = JSON.parse(localStorage.getItem('favoriteDrinkList'));
-
-
-// Main Container
-const mainContainer = document.querySelector('.main');
+// Lists Container
+const listsContainer = document.querySelector('.js_listsContainer');
 
 
 // Error texts
 const errorContainer = document.querySelector('.js_errorContainer');
+
+
+// Searches
+const searchContainer = document.querySelector('.js_searchContainer');
+const searchList = document.querySelector('.js_searchList');
+const searchTitle = document.querySelector('.js_searchTitle');
+
+
+// Favorites
+let favorites = [];
+const favoritesContainer = document.querySelector('.js_favorites');
+const favoritesList = document.querySelector('.js_favoritesList');
+const deleteAllFavoritesButton = document.querySelector('.js_resetFavorites');
+
+
+// LocalStorage
+const favoriteDrinkList = JSON.parse(localStorage.getItem('favoriteDrinkList'));

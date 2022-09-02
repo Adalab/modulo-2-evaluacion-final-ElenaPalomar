@@ -47,7 +47,7 @@ function renderFavorites(favorites) {
     listItem.appendChild(listItemButton);
 
 
-    favoriteList.appendChild(listItem);
+    favoritesList.appendChild(listItem);
 
   }
 

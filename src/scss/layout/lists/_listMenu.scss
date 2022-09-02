@@ -1,7 +1,7 @@
 .menu {
   width: 150px;
 
-  margin: 35px auto 20px;
+  margin: 35px auto -2px;
 
 
   &__list {
@@ -12,10 +12,11 @@
 
 
   &__item {
-    background-color: white;
-    border-radius: 50%;
+    background-color: $colorDarkBackground;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
 
-    width: 60px;
+    width: 70px;
     height: 60px;
 
     font-size: 45px;
@@ -25,31 +26,52 @@
     cursor: pointer;
 
 
-    &--hideFavorites {
-      background-color: $colorDarkPinkSuperTransparent;
-      border: $colorSoftPinkTransparent 2px outset;
+    .itemContent {
+      border: 2px outset;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
 
-      color: $colorSoftPinkTransparent;
-    }
+      width: 100%;
+      height: 100%;
 
-    &--showFavorites {
-      background-color: $colorDarkPinkSuperTransparent;
-      border: $colorSoftPinkTransparent 2px outset;
+      padding-top: 2px;
 
-      color: $colorSoftPinkTransparent;
+      display: block;
 
-      .itemContent__icon--favorites {
+
+      &--hideFavorites {
+        background-color: $colorDarkPinkSuperTransparent;
+        border-color: $colorSoftPinkTransparent;
+        border-bottom: none;
+
         color: $colorSoftPinkTransparent;
       }
-    }
+
+      &--showFavorites {
+        background-color: $colorDarkPinkSuperTransparent;
+        border-color: $colorSoftPinkTransparent;
+        border-bottom: none;
+
+        color: $colorSoftPinkTransparent;
+      }
 
 
-    &--searches {
-      background-color: $colorWhiteTransparent;
-      border: $colorWhite 2px outset;
+      &--showSearches {
+        background-color: $colorWhiteTransparent;
+        border-color: $colorWhite;
+        border-bottom: none;
+  
+        color: $colorWhite;
+      }
 
-      color: $colorWhite;
-    }
+      &--hideSearches {
+        background-color: $colorWhiteTransparent;
+        border-color: $colorWhite;
+        border-bottom: none;
+  
+        color: $colorWhite;
+      }
+  }
 
 
     .itemContentText {
