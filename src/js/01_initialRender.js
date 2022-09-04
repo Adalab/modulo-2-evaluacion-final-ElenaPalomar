@@ -27,7 +27,6 @@ function initialGetFromServer() {
 
       initialDrinks = reducedRandomInitialDrinks;
 
-
       deletePreviousQueries();
       renderInitialDrinks(initialDrinks);
 
