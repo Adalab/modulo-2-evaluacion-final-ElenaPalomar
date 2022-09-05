@@ -17,14 +17,17 @@ function handleClickDeleteFavorites(event) {
 
   localStorage.setItem('favoriteDrinkList', JSON.stringify(favorites));
 
-  deletePreviusRenderedDrinks();
-  renderDrinks(drinks);
+  if (drinks.length !== 0) {
 
-  removePreviusInitialDrinks();
-  renderInitialDrinks(initialDrinks);
+    rerenderDrinks();
+    rerenderFavorites();
 
-  removePreviusRenderedFavorites();
-  renderFavorites(favorites);
+  } else {
+
+    rerenderInitialDrinks();
+    rerenderFavorites();
+
+  }
 
 }
 

@@ -67,11 +67,23 @@ const favoriteDrink = (object, item) => {
 };
 
 
-// Function to delete previous queries
+// Function to delete previous rendered queries
 
 const deletePreviusRenderedDrinks = () => {
 
   const liList = document.querySelectorAll('.js_drinks');
+  for (const item of liList) {
+    item.remove();
+  }
+
+};
+
+
+// Function to delete initial drinks
+
+const deletePreviusInitialDrinks = () => {
+
+  const liList = document.querySelectorAll('.js_initialDrinks');
   for (const item of liList) {
     item.remove();
   }

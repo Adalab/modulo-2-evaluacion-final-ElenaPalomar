@@ -1,12 +1,12 @@
 'use strict';
 
-
 // Function to render drinks list into Html
-function renderDrinks(list) {
+function renderDrinks() {
 
-  removePreviusInitialDrinks();
+  listsContainer.classList.remove('hidden');
+  deletePreviusInitialDrinks();
 
-  for (const drink of list) {
+  for (const drink of drinks) {
 
     const liItem = createLiItem('drink', 'js_drinks', drink);
 
@@ -25,6 +25,3 @@ function renderDrinks(list) {
   listenersRenderedDrinks();
 
 }
-
-
-deletePreviusRenderedDrinks();
