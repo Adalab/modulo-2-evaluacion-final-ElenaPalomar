@@ -35,7 +35,7 @@ function getFromServer(searchTextValue) {
 
       }
     })
-    .catch((error) => {
+    .catch(() => {
 
       searchContainer.classList.add('hidden');
 
