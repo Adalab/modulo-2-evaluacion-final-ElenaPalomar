@@ -22,6 +22,14 @@ const errorMessage = (errorTextContent, errorImageURL, errorImageAlt, errorImage
     errorImage.setAttribute('alt', errorImageAlt);
     errorImage.setAttribute('title', errorImageTitle);
     errorContainer.appendChild(errorImage);
+
+    const backToListButton = document.createElement('button');
+    backToListButton.classList.add('backToListButton', 'js_backToListButton');
+    const backToListButtonText = document.createTextNode('Volver');
+    backToListButton.appendChild(backToListButtonText);
+    errorContainer.appendChild(backToListButton);
+
+    listenerDeleteFavoritesButton();
   }
 
 };
@@ -33,15 +41,40 @@ const deleteErrorMessage = () => {
 
     const errorText = document.querySelectorAll('.js_errorText');
     const errorImage = document.querySelector('.js_errorImage');
+    const backToListButton = document.querySelector('.js_backToListButton');
 
     for (const item of errorText) {
       item.remove();
     }
 
     errorImage.remove();
+    backToListButton.remove();
 
     errorContainer.classList.add('hidden');
 
   }
 
 };
+
+
+// Function to return to list when 'backToListButton' is clicked
+
+const handleClickBackToListButton = () => {
+
+  deleteErrorMessage();
+
+  listsContainer.classList.remove('hidden');
+  favoritesContainer.classList.remove('hidden');
+  favoritesContainer.classList.remove('hidden');
+  menuShowFavorites();
+
+  renderInitialDrinks();
+
+};
+
+
+function listenerDeleteFavoritesButton() {
+  const backToListButton = document.querySelector('.js_backToListButton');
+
+  backToListButton.addEventListener('click', handleClickBackToListButton);
+}

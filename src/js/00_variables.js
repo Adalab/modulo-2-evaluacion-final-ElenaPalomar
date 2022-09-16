@@ -23,12 +23,16 @@ const searchContainer = document.querySelector('.js_searchContainer');
 const searchList = document.querySelector('.js_searchList');
 const searchTitle = document.querySelector('.js_searchTitle');
 
+const searchesMenuButton = document.querySelector('.js_showSearches');
+
 
 // Favorites
 let favorites = [];
 const favoritesContainer = document.querySelector('.js_favorites');
 const favoritesList = document.querySelector('.js_favoritesList');
 const deleteAllFavoritesButton = document.querySelector('.js_resetFavorites');
+
+const favoriteMenuButton = document.querySelector('.js_showFavorites');
 
 
 // LocalStorage

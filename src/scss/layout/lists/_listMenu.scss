@@ -1,7 +1,7 @@
 .menu {
   width: 150px;
 
-  margin: 35px auto -2px;
+  margin: 35px auto 0;
 
 
   &__list {
@@ -37,41 +37,57 @@
       padding-top: 2px;
 
       display: block;
+    }
 
 
-      &--hideFavorites {
+    &--hideFavorites {
+      margin-bottom: 0;
+
+      .itemContent {
+        background-color: $colorDarkPinkSuperTransparent;
+        border-color: $colorSoftPinkSuperTransparent;
+        border-bottom: none;
+
+        color: $colorSoftPinkTransparent;
+      }
+    }
+
+    &--showFavorites {
+      margin-bottom: -3px;
+
+      .itemContent {
         background-color: $colorDarkPinkSuperTransparent;
         border-color: $colorSoftPinkTransparent;
         border-bottom: none;
 
         color: $colorSoftPinkTransparent;
       }
-
-      &--showFavorites {
-        background-color: $colorDarkPinkSuperTransparent;
-        border-color: $colorSoftPinkTransparent;
-        border-bottom: none;
-
-        color: $colorSoftPinkTransparent;
-      }
+    }
 
 
-      &--showSearches {
+    &--showSearches {
+      margin-bottom: -3px;
+
+      .itemContent {
         background-color: $colorWhiteTransparent;
         border-color: $colorWhite;
         border-bottom: none;
-  
+
         color: $colorWhite;
       }
+    }
 
-      &--hideSearches {
+    &--hideSearches {
+      margin-bottom: 0;
+
+      .itemContent {
         background-color: $colorWhiteTransparent;
         border-color: $colorWhite;
         border-bottom: none;
-  
+
         color: $colorWhite;
       }
-  }
+    }
 
 
     .itemContentText {

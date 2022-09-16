@@ -29,6 +29,10 @@ function getFromServer(searchTextValue) {
         deletePreviousQueries();
         renderDrinks();
 
+        searchContainer.classList.remove('hidden');
+        favoritesContainer.classList.add('hidden');
+        menuShowSearches();
+
 
         // Display the cocktail list title dynamically with the name of the searched cocktail
         searchTitle.innerHTML = searchTextValue;
