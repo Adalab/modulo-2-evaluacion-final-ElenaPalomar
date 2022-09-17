@@ -1,3 +1,8 @@
 .listsContainer {
-  margin: 50px auto;
+  margin: 10px auto 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
 }

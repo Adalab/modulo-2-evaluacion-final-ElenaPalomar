@@ -29,6 +29,7 @@ function initialGetFromAPI() {
 
 
       renderInitialDrinks();
+      renderFavorites(favorites);
 
 
       searchTitle.innerHTML = 'Algunos cócteles';

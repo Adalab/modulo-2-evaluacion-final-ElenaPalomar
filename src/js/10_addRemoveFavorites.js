@@ -43,7 +43,11 @@ const rerenderInitialDrinks = () => {
 
 const rerenderFavorites = () => {
 
-  removePreviusRenderedFavorites();
+  if (favoritesList.classList.contains('hidden')) {
+    deleteErrorEmptyFavorites();
+  }
+
+  deletePreviusRenderedFavorites();
   renderFavorites(favorites);
 
 };

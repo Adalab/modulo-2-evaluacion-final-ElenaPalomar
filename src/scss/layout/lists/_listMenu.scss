@@ -3,6 +3,8 @@
 
   margin: 35px auto 0;
 
+  position: relative;
+
 
   &__list {
     display: flex;
@@ -17,24 +19,29 @@
     border-top-right-radius: 50%;
 
     width: 70px;
-    height: 60px;
+    height: 80px;
 
     font-size: 45px;
     line-height: 1.7;
     text-align: center;
 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
     cursor: pointer;
 
 
     .itemContent {
-      border: 2px outset;
+      border: 2px solid;
       border-top-left-radius: 50%;
       border-top-right-radius: 50%;
 
       width: 100%;
-      height: 100%;
+      height: 90%;
 
-      padding-top: 2px;
+      margin-top: 8px;
+      padding-top: 8px;
 
       display: block;
     }
@@ -44,8 +51,8 @@
       margin-bottom: 0;
 
       .itemContent {
-        background-color: $colorDarkPinkSuperTransparent;
-        border-color: $colorSoftPinkSuperTransparent;
+        background-color: #260026;
+        border-color: #9F469F;
         border-bottom: none;
 
         color: $colorSoftPinkTransparent;
@@ -53,11 +60,11 @@
     }
 
     &--showFavorites {
-      margin-bottom: -3px;
+      margin-bottom: -4px;
 
       .itemContent {
-        background-color: $colorDarkPinkSuperTransparent;
-        border-color: $colorSoftPinkTransparent;
+        background-color: #260026;
+        border-color: #9F469F;
         border-bottom: none;
 
         color: $colorSoftPinkTransparent;
@@ -66,11 +73,11 @@
 
 
     &--showSearches {
-      margin-bottom: -3px;
+      margin-bottom: -4px;
 
       .itemContent {
-        background-color: $colorWhiteTransparent;
-        border-color: $colorWhite;
+        background-color: #666166;
+        border-color: $colorSoftGreyTransparent;
         border-bottom: none;
 
         color: $colorWhite;
@@ -82,7 +89,7 @@
 
       .itemContent {
         background-color: $colorWhiteTransparent;
-        border-color: $colorWhite;
+        border-color: $colorSoftGreyTransparent;
         border-bottom: none;
 
         color: $colorWhite;

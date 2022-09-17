@@ -8,20 +8,21 @@
 
   min-width: 240px;
   width: calc(100% - 60px);
+  max-width: 800px;
 
   margin: 0 30px;
   padding: 20px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-
-  z-index: 2;
 
 
   &__title {
     width: 100%;
+
+    margin-bottom: 20px;
 
     color: $colorWhite;	
     text-shadow:
@@ -40,18 +41,16 @@
   }
 
 
-  &__list {    
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
     .favorite {
-      border: #1d031d 1px solid;
-
       width: 150px;
-      height:150px;
+      height: 180px;
 
-      margin: 20px;
+      margin: 20px 30px;
       padding: 20px 0;
 
       display: flex;
@@ -63,14 +62,16 @@
 
       &__image {
         border: #1d031d 1px solid;
-        width: 150px;
-        height: 150px;
+        border-radius: 50%;
+
+        width: 180px;
+        height: 180px;
 
         position: absolute;
       }
 
       &__title {
-        width: 120px;
+        width: 150px;
 
         margin: 5px 0;
 
@@ -129,17 +130,44 @@
 
   .resetFavorites {
     background-image: linear-gradient($colorSoftSilver, $colorMediumSilver, $colorDarkSilver);
-
-    box-shadow:
-      0 0 10px $colorMediumPink;
-
-    width: 140px;
-
-    margin: 20px;
-    padding: 5px;
-
+    box-shadow: $colorMediumPink 0 0 12px;
+    border: 0;
+    border-radius: 20px;
+  
+    width: 160px;
+  
+    margin: 30px 30px;
+    padding: 15px 10px;
+  
     color: $colorDarkBackground;
-
+    font-family: $fontTextTitle;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  
     cursor: pointer;
+  
+    transition: all .5s ease;
+  }
+  
+  .resetFavorites:hover {  
+    background-color: $colorMediumPink;  
+    box-shadow: $colorSoftPinkTransparent 0px 7px 29px 0px;
+  
+    color: $colorWhite;
+    letter-spacing: 3px;
+  }
+  
+  .resetFavorites:active {  
+    background-color: $colorMediumPink;  
+    box-shadow: none;
+  
+    color: $colorWhite;
+    letter-spacing: 3px;
+  
+    transform: translateY(10px);
+  
+    transition: 100ms;
   }
 }

@@ -2,6 +2,34 @@
 
 // FUNCTIONS
 
+// Function to create a error 'p' item
+
+const createPErrorItem = (errorTextContent) => {
+
+  const errorTag = document.createElement('p');
+  errorTag.classList.add('error__text', 'js_errorText');
+  const errorText = document.createTextNode(errorTextContent);
+  errorTag.appendChild(errorText);
+
+  return errorTag;
+
+};
+
+// Function to create a error 'p' item
+
+const createImgErrorItem = (errorImageURL, errorImageAlt, errorImageTitle) => {
+
+  const errorImage = document.createElement('img');
+  errorImage.classList.add('error__image', 'js_errorImage');
+  errorImage.setAttribute('src', errorImageURL);
+  errorImage.setAttribute('alt', errorImageAlt);
+  errorImage.setAttribute('title', errorImageTitle);
+
+  return errorImage;
+
+};
+
+
 // Function to creater the text of an error message
 
 const errorMessage = (errorTextContent, errorImageURL, errorImageAlt, errorImageTitle) => {
@@ -9,18 +37,11 @@ const errorMessage = (errorTextContent, errorImageURL, errorImageAlt, errorImage
   errorContainer.classList.remove('hidden');
   listsContainer.classList.add('hidden');
 
-  const errorTag = document.createElement('p');
-  errorTag.classList.add('error__text', 'js_errorText');
-  const errorText = document.createTextNode(errorTextContent);
-  errorTag.appendChild(errorText);
+  const errorTag = createPErrorItem(errorTextContent);
   errorContainer.appendChild(errorTag);
 
   if (errorImageURL !== undefined) {
-    const errorImage = document.createElement('img');
-    errorImage.classList.add('error__image', 'js_errorImage');
-    errorImage.setAttribute('src', errorImageURL);
-    errorImage.setAttribute('alt', errorImageAlt);
-    errorImage.setAttribute('title', errorImageTitle);
+    const errorImage = createImgErrorItem(errorImageURL, errorImageAlt, errorImageTitle);
     errorContainer.appendChild(errorImage);
 
     const backToListButton = document.createElement('button');
@@ -64,11 +85,9 @@ const handleClickBackToListButton = () => {
   deleteErrorMessage();
 
   listsContainer.classList.remove('hidden');
-  favoritesContainer.classList.remove('hidden');
-  favoritesContainer.classList.remove('hidden');
-  menuShowFavorites();
+  handleShowFavorites() <
 
-  renderInitialDrinks();
+    renderInitialDrinks();
 
 };
 
