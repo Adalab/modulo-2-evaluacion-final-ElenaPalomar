@@ -72,6 +72,7 @@ const deleteErrorMessage = () => {
     backToListButton.remove();
 
     errorContainer.classList.add('hidden');
+    rerenderFavorites();
 
   }
 
