@@ -91,6 +91,8 @@ const handleClickBackToListButton = () => {
   renderInitialDrinks();
   searchTitle.innerHTML = 'Algunos cócteles';
 
+  searchText.value = '';
+
 };
 
 
