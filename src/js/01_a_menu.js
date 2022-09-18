@@ -33,6 +33,9 @@ const handleShowFavorites = () => {
 
   menuShowFavorites();
 
+  favoritesIcon.setAttribute('name', 'heart');
+  searchesIcon.setAttribute('name', 'wine-outline');
+
 };
 
 favoriteMenuButton.addEventListener('click', handleShowFavorites);
@@ -46,6 +49,9 @@ const handleShowSearches = () => {
   favoritesContainer.classList.add('hidden');
 
   menuShowSearches();
+
+  searchesIcon.setAttribute('name', 'wine');
+  favoritesIcon.setAttribute('name', 'heart-outline');
 
 };
 
