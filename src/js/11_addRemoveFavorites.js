@@ -89,9 +89,9 @@ function listenersRenderedDrinks() {
 }
 
 function listenersRenderedInitialDrinks() {
-  const renderedDrinks = document.querySelectorAll('.js_initialDrinks');
+  const renderedDrinksHeart = document.querySelectorAll('.js_addRemoveFavorite');
 
-  for (const item of renderedDrinks) {
+  for (const item of renderedDrinksHeart) {
     item.addEventListener('click', handleClickInitialDrinks);
   }
 }

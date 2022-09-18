@@ -54,7 +54,7 @@ const createh3Item = (titleClass, object) => {
 
 // Function to search for an item in favorite's list and if it is, add favorite class to mark it as favorite
 
-const favoriteDrink = (object, item) => {
+const favoriteDrink = (object, item, icon) => {
 
   const foundFavoriteIndex = favorites.findIndex(item => {
     return item.id === object.id;
@@ -62,6 +62,7 @@ const favoriteDrink = (object, item) => {
 
   if (foundFavoriteIndex !== -1) {
     item.classList.add('drink--favorite');
+    icon.classList.add('addRemoveFavorite--added');
   }
 
 };
