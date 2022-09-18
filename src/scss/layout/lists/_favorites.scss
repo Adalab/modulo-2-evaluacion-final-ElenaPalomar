@@ -46,6 +46,7 @@
     justify-content: center;
     flex-wrap: wrap;
 
+
     .favorite {
       width: 150px;
       height: 180px;
@@ -62,6 +63,7 @@
 
       &__image {
         border: #1d031d 1px solid;
+        box-shadow: 0 0 20px $colorMediumSilver;
         border-radius: 50%;
 
         width: 180px;
