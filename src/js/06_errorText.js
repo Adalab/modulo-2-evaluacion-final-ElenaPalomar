@@ -85,9 +85,10 @@ const handleClickBackToListButton = () => {
   deleteErrorMessage();
 
   listsContainer.classList.remove('hidden');
-  handleShowFavorites() <
+  handleShowFavorites();
 
-    renderInitialDrinks();
+  renderInitialDrinks();
+  searchTitle.innerHTML = 'Algunos cócteles';
 
 };
 
