@@ -86,7 +86,7 @@ const handleClickBackToListButton = () => {
   deleteErrorMessage();
 
   listsContainer.classList.remove('hidden');
-  handleShowFavorites();
+  handleShowSearches();
 
   renderInitialDrinks();
   searchTitle.innerHTML = 'Algunos cócteles';
