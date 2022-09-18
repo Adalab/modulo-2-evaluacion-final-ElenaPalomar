@@ -19,19 +19,12 @@
       0 0 180px $colorDarkPink;
 
       font-family: $fontTitle;
-      font-size: 27px;
+      font-size: 8vw;
       text-align: center;
 
-    @media all and (min-width: 480px) {
-      font-size: 40px;
-    }
-
-    @media all and (min-width: 768px) {
-      font-size: 60px;
-    }
 
     @media all and (min-width: 900px) {
-      font-size: 80px;
+      font-size: 73px;
     }
 }
 }
