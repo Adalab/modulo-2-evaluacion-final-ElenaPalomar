@@ -8,48 +8,18 @@ function renderFavorites(favorites) {
 
     for (const favorite of favorites) {
 
-      const listItem = document.createElement('li');
-      listItem.classList.add('favorite', 'js_favorite');
-      listItem.setAttribute('id', favorite.id);
+      const liItem = createLiItem('favorite', 'js_favorite', favorite);
 
+      const itemImage = createImgItem(favorite, 'favorite__image');
+      liItem.appendChild(itemImage);
 
-      const listItemImage = document.createElement('img');
-      if (favorite.image === '') {
+      const itemTitle = createh3Item('favorite__title', favorite);
+      liItem.appendChild(itemTitle);
 
-        listItemImage.setAttribute('src', 'https://via.placeholder.com/210x295/ffffff/666666/?text=img');
-        listItemImage.setAttribute('alt', favorite.name);
-        listItemImage.classList.add('favorite__image');
+      const itemButton = createButtonItem('deleteFavorite', 'js_deleteFavorite', favorite, 'deleteFavorite__icon', 'heart-dislike-outline');
+      liItem.appendChild(itemButton);
 
-      } else {
-
-        listItemImage.setAttribute('src', `${favorite.image}/preview`);
-        listItemImage.setAttribute('alt', favorite.name);
-        listItemImage.classList.add('favorite__image');
-
-      }
-      listItem.appendChild(listItemImage);
-
-
-      const listItemTitle = document.createElement('h3');
-      listItemTitle.classList.add('favorite__title');
-      const listItemTitleContent = document.createTextNode(favorite.name);
-      listItemTitle.appendChild(listItemTitleContent);
-      listItem.appendChild(listItemTitle);
-
-
-      const listItemButton = document.createElement('button');
-      listItemButton.classList.add('deleteFavorite', 'js_deleteFavorite');
-      listItemButton.setAttribute('id', favorite.id);
-
-      const listItemButtonIcon = document.createElement('ion-icon');
-      listItemButtonIcon.classList.add('deleteFavorite__icon');
-      listItemButtonIcon.setAttribute('name', 'heart-dislike-outline');
-      listItemButton.appendChild(listItemButtonIcon);
-
-      listItem.appendChild(listItemButton);
-
-
-      favoritesList.appendChild(listItem);
+      favoritesList.appendChild(liItem);
 
     }
 

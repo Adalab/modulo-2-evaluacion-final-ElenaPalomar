@@ -15,6 +15,7 @@ function renderInitialDrinks() {
     const itemTitle = createh3Item('drink__title', drink);
     liItem.appendChild(itemTitle);
 
+
     searchList.appendChild(liItem);
 
   }
