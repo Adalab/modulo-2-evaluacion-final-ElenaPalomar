@@ -81,17 +81,17 @@ function handleClickInitialDrinks(event) {
 
 // Listeners of each element of drinks list to add/remove a drink to/from favorites
 function listenersRenderedDrinks() {
-  const renderedDrinks = document.querySelectorAll('.js_drinks');
+  const renderedDrinksHeart = document.querySelectorAll('.js_addRemoveFavorite');
 
-  for (const item of renderedDrinks) {
+  for (const item of renderedDrinksHeart) {
     item.addEventListener('click', handleClickRenderedDrinks);
   }
 }
 
 function listenersRenderedInitialDrinks() {
-  const renderedDrinks = document.querySelectorAll('.js_initialDrinks');
+  const renderedDrinksHeart = document.querySelectorAll('.js_addRemoveFavorite');
 
-  for (const item of renderedDrinks) {
+  for (const item of renderedDrinksHeart) {
     item.addEventListener('click', handleClickInitialDrinks);
   }
 }

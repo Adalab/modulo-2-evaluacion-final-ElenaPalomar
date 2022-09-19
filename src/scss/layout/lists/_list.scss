@@ -48,8 +48,6 @@
 
       box-shadow: 0 0 20px $colorBlack;
 
-      cursor: pointer;
-
 
       &__image {
         width: 150px;
@@ -71,7 +69,32 @@
           0 0 40px $colorMediumPink,
           0 0 50px $colorDarkPink;
 
-          border: pink 5px solid;
+        border: pink 5px solid;
+
+      }
+
+      .addRemoveFavorite {
+        background-color: $colorWhite;
+        border-radius: 50%;
+
+        width: 30px;
+        height: 30px;
+
+        color: $colorMediumBackground;
+        font-size: 25px;
+        line-height: 1.55;
+        text-align: center;
+
+        position: absolute;
+
+        transform: translateY(-17px) translateX(138px);
+
+        cursor: pointer;
+
+
+        &--added {
+          color: $colorSoftPink;
+        }
       }
     }
   }

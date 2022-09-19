@@ -2,10 +2,10 @@
 
 // Function to create a 'li' item
 
-const createLiItem = (firstClass, SecondClass, object) => {
+const createLiItem = (firstClass, secondClass, object) => {
 
   const liItem = document.createElement('li');
-  liItem.classList.add(firstClass, SecondClass);
+  liItem.classList.add(firstClass, secondClass);
   liItem.setAttribute('id', object.id);
 
   return liItem;
@@ -54,7 +54,7 @@ const createh3Item = (titleClass, object) => {
 
 // Function to search for an item in favorite's list and if it is, add favorite class to mark it as favorite
 
-const favoriteDrink = (object, item) => {
+const favoriteDrink = (object, item, icon) => {
 
   const foundFavoriteIndex = favorites.findIndex(item => {
     return item.id === object.id;
@@ -62,10 +62,28 @@ const favoriteDrink = (object, item) => {
 
   if (foundFavoriteIndex !== -1) {
     item.classList.add('drink--favorite');
+    icon.classList.add('addRemoveFavorite--added');
   }
 
 };
 
+
+// Function to create a 'button' item
+
+const createButtonItem = (firstButtonClass, secondButtonClass, object, iconClass, iconName) => {
+
+  const buttonItem = document.createElement('button');
+  buttonItem.classList.add(firstButtonClass, secondButtonClass);
+  buttonItem.setAttribute('id', object.id);
+
+  const buttonItemIcon = document.createElement('ion-icon');
+  buttonItemIcon.classList.add(iconClass);
+  buttonItemIcon.setAttribute('name', iconName);
+  buttonItem.appendChild(buttonItemIcon);
+
+  return buttonItem;
+
+};
 
 // Function to delete previous rendered queries
 

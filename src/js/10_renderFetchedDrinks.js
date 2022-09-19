@@ -10,7 +10,10 @@ function renderDrinks() {
 
     const liItem = createLiItem('drink', 'js_drinks', drink);
 
-    favoriteDrink(drink, liItem);
+    const itemButton = createButtonItem('addRemoveFavorite', 'js_addRemoveFavorite', drink, 'addRemoveFavorite__icon', 'heart');
+    liItem.appendChild(itemButton);
+
+    favoriteDrink(drink, liItem, itemButton);
 
     const itemImage = createImgItem(drink, 'drink__image');
     liItem.appendChild(itemImage);
