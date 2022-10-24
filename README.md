@@ -52,13 +52,13 @@
 
 <h3 id="almacenamiento-local">Almacenamiento Local 📲</h3>
 
-<p align="justify">Para que nos perdamos nuestra lista al recargar la página o al volver a ella después de cerrarla, los datos quedan almacenados en el <em>local storage</em>, o lo que es lo mismo, en el almacenamiento local de nuestro navegador.</p>
+<p align="justify">Para que no perdamos nuestra lista de favoritos al recargar la página o al volver a ella después de cerrarla, los datos quedan almacenados en el <em>local storage</em>, o lo que es lo mismo, en el almacenamiento local de nuestro navegador.</p>
 
 <h3 id="errores">Errores ⚠</h3>
 
-<p align="justify">Entre otros mucho, hay varios errores que se pueden dar al navegar por la aplicación web, por lo que se ha buscado una forma de avisar al usuario:
+<p align="justify">Hay varios errores que pueden ocurrir al navegar por la aplicación web, por lo que se ha buscado una forma de avisar al usuario:
 <ul>
-  <li>Al obtener los datos de los cóctles, puede haber alguna imagen que este rota o que simplemente no haya imagen. Por lo que se ha añadido una imagen por defecto para estos casos.</li>
+  <li>Al obtener los datos de los cócteles, puede haber alguno que no tenga una imagen asociada, por lo que se ha añadido una imagen por defecto para estos casos.</li>
   <li>Cuando el usuario no introduce ningún nombre en el cuadro de texto y presiona el botón de buscar, la página muestra un error indicando al usuario que debe rellenar ese campo para que pueda continuar.</li>
   <li>Lo mismo pasa si el usuario pone un nombre que no coincide con ninguno de los elementos que contiene la base de datos. En ambos caso la página ofrece un botón para volver a la página principal.</li>
   <li>Cuando ocurre un error al pedir los datos al API, ésta nos devuelve un mensaje para intentarlo nuevamente, pues se trataría de un problema de conexión con la misma.</li>
