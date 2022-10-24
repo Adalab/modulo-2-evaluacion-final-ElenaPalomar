@@ -50,7 +50,7 @@
 
 <p align="justify">Hasta ahora hemos estado viendo la página principal en la que se ven los cócteles por defecto o los que hemos buscado, pero, si nos desplazamos a la pestaña de favoritos tendremos un listados de cócteles que hemos seleccionado nosotros. Cada uno de éstos tiene un botón para eliminarlo de la lista de favoritos y, al final de la misma, un botón para eliminarlos todos a la vez.</p>
 
-<h3 id="lista-favoritos">Almacenamiento Local 📲</h3>
+<h3 id="almacenamiento-local">Almacenamiento Local 📲</h3>
 
 <p align="justify">Para que nos perdamos nuestra lista al recargar la página o al volver a ella después de cerrarla, los datos quedan almacenados en el <em>local storage</em>, o lo que es lo mismo, en el almacenamiento local de nuestro navegador.</p>
 
