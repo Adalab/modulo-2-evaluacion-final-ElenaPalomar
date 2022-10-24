@@ -1,6 +1,6 @@
 <h1 align="center"> 🍸 Buscador De Cócteles 🍹</h1>
 
-## 👋 Bienvenid@! {#proyecto}
+<h2 id="proyecto">👋 Bienvenid@!</h2>
 
 <p align="justify">Este proyecto consiste en una aplicación web que contiene un listado de las bebidas y cócteles de todo el mundo, que puedes buscar, des/marcar como favoritos y guardarlos en local storage.</p>
 
@@ -8,7 +8,9 @@
   <img src="./src/images/README/preview.png" width=60%/>
 </p>
 
-#### Links 📌
+####
+
+<h4 id="links">Links 📌</h4>
 
 - [Repositorio en GitHub](https://github.com/ElenaPalomar/cocktails-browser)
 - [Buscador de cócteles](https://elenapalomar.github.io/cocktails-browser/)
@@ -29,30 +31,30 @@
 - [Construido con](#construido-con)
 - [Autora](#autora)
 
-## 📄 ¿Qué puedes esperar de este proyecto? {#descripcion}
+<h2 id="descripcion">📄 ¿Qué puedes esperar de este proyecto?</h2>
 
-### Inicio :clapper: {#inicio}
+<h3 id="inicio">Inicio 🎬</h3>
 
 <p align="justify">En un primer momento, la página muestra un listado aleatorio de cócteles y un buscador.</p>
 <p align="justify">Desde este momento ya se puede realizar una búsqueda del cóctel por el que sientas curiosidad, añadir o quitar cualquiera de los cócteles que se muestran a favoritos y echar un vistazo a los que ya tenía guardados haciendo click en la pestaña que se identifica con un corazón (favoritos).</p>
 
-### Buscar :mag: {#buscar}
+<h3 id="buscar">Buscar 🔍</h3>
 
 <p align="justify">Al hacer clic sobre el botón de Buscar, la aplicación se conecta al API <a href="https://www.thecocktaildb.com" target="_blank">TheCocktailDB</a> y devuelve un listado de los cócteles que contienen la palabra que el usurio haya escrito en el cuadro de texto.</p>
 
-### Agregar/quitar de favoritos :heart: / :broken_heart: {#favoritos}
+<h3 id="favoritos">Agregar/quitar de favoritos ❤ / 💔</h3>
 
 <p align="justify">Cada uno de los cócteles que se renderizan tiene un corazón en la esquina superior derecha, en el cual puedes hacer click y señalar que ese cóctel es tu favorito o que ha dejado de serlo. Cuando pulsas el corazón ocurren dos cosas: el cóctel se cambia su apariencia visual y se añade a la lista de favoritos.</p>
 
-### Listado de favoritos :heart_decoration: {#lista-favoritos}
+<h3 id="lista-favoritos">Listado de favoritos 💟</h3>
 
 <p align="justify">Hasta ahora hemos estado viendo la página principal en la que se ven los cócteles por defecto o los que hemos buscado, pero, si nos desplazamos a la pestaña de favoritos tendremos un listados de cócteles que hemos seleccionado nosotros. Cada uno de éstos tiene un botón para eliminarlo de la lista de favoritos y, al final de la misma, un botón para eliminarlos todos a la vez.</p>
 
-### Almacenamiento Local :package: {#almacenamiento-local}
+<h3 id="lista-favoritos">Almacenamiento Local 📲</h3>
 
 <p align="justify">Para que nos perdamos nuestra lista al recargar la página o al volver a ella después de cerrarla, los datos quedan almacenados en el <em>local storage</em>, o lo que es lo mismo, en el almacenamiento local de nuestro navegador.</p>
 
-### Errores :warning: {#errores}
+<h3 id="errores">Errores ⚠</h3>
 
 <p align="justify">Entre otros mucho, hay varios errores que se pueden dar al navegar por la aplicación web, por lo que se ha buscado una forma de avisar al usuario:
 <ul>
@@ -63,11 +65,11 @@
 </ul>
 </p>
 
-## 📋 Requisitos para poder trabajar con el proyecto {#requisitos}
+<h2 id="requisitos">📝 Requisitos para poder trabajar con el proyecto</h2>
 
 <p align="justify">Para poder trabajar con este proyecto, además de clonar o descargar el mismo, hay que tener en cuenta que utiliza un conjunto de paquetes o librerias diseñado por Adalab.</p>
 
-### Instalación ⚙️ {#instalacion}
+<h3 id="instalacion">Instalación ⚙️</h3>
 
 <p align="justify">Lo primero que debes hacer es escribir en la consola, dentro de la carpeta en la que se encuentra el proyecto:</p>
 
@@ -83,21 +85,21 @@
 
 <p align="justify">Finalmente, para subir los cambios realizados a un servidor, se recomienda actualizar la versión de producción de nuestro proyecto que se encuentra en la carpeta <code>docs</code>. Para ello, usamos el comando:</p>
 
-`npm start`
+`npm run docs`
 
 <p align="justify">que borra la carpeta anterior con el mismo nombre (si la había) y la vuelve a crear de nuevo con el proyecto actualizado.</p>
 
-## 🛠️ Construido con {#construido-con}
+<h2 id="construido-con">🛠️ Construido con</h2>
 
 - HTML5 <img src="./src/images/README/HTML5.png" width=3%/>
-- Sass <img src="./src/images/README/sass.png" width=4%/>
+- Sass <img src="./src/images/README/sass.png" width=3%/>
 - Flexbox
 - Diseño _responsive_
 - Flujo de trabajo _Mobile-first_
-- JavaScript <img src="./src/images/README/JS.png" width=5%/>
+- JavaScript <img src="./src/images/README/JS.png" width=4%/>
 - Gulp <img src="./src/images/README/gulp.png" width=2%/>
 
-## ✒️ Autora {#autora}
+<h2 id="autora">✒️ Autora</h2>
 
 - LinkedIn - [elena-palomar](https://www.linkedin.com/in/elena-palomar/)
 - GitHub - [ElenaPalomar](https://github.com/ElenaPalomar)
